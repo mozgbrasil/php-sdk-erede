@@ -11,11 +11,7 @@
 
 ## Sinopse
 
-Framework da Mozg
-
-## Sinopse
-
-Checkout da compra em 1 passo para Magento
+SDK disponibilizado pela "userede"
 
 ## Motivação
 
