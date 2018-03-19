@@ -13,8 +13,27 @@
 
 Framework da Mozg
 
+## Sinopse
+
+Checkout da compra em 1 passo para Magento
+
+## Motivação
+
+Automação para a instalação da bibilioteca
+
+Para mais informações, visite
 
 https://www.userede.com.br/desenvolvedores/pt/produto/e-Rede#bibliotecas-php
+
+Note que não somos o desenvolvedor desta extensão
+
+Esse repositório foi criado com o intuito de instalar a extensão via composer
+
+Neste repositório foi adicionado somente o suporte ao composer
+
+## Suporte / Dúvidas
+
+Para obter o devido suporte entre em contato com a desenvolvedora da extensão
 
 ## Instalação - Atualização - Desinstalação
 

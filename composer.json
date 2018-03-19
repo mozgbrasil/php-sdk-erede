@@ -5,7 +5,7 @@
     "type": "library",
     "keywords": ["cerebrum", "mozg", "magento", "magento2", "framework", "ubuntu", "php", "mysql"],
     "homepage": "http://mozg.com.br",
-    "time": "COMPILE_DATE",
+    "time": "2017-03-19 18:11:01",
     "license": [
         "proprietary"
     ],
