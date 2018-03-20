@@ -1,7 +1,5 @@
 <?php
 
-namespace erede;
-
 use erede\common\Request;
 use erede\model\Security;
 use erede\model\QueryTransactionResponse;
