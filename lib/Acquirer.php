@@ -1,5 +1,7 @@
 <?php
 
+namespace erede;
+
 use erede\common\Request;
 use erede\model\Security;
 use erede\model\TransactionRequest;
@@ -32,7 +34,7 @@ class Acquirer {
         try {
 	        $request = new Request($this->security);
 	        $response = $request->post($url_path, $transactionRequest->toJson());
-	        
+
 	        if ($response == null) {
 	        	throw new Exception();
 	        }
@@ -43,9 +45,9 @@ class Acquirer {
         	$response->setReturnMessage($e->getMessage());
             return $response;
         }
-        
+
         $transactionResponse = TransactionResponse::mapFromJson($response);
-        
+
         return $transactionResponse;
     }
 
@@ -57,7 +59,7 @@ class Acquirer {
     function capture($tid, TransactionRequest $transactionRequest = null)
     {
         $url_path = "transactions/$tid";
-        
+
         if (is_null($transactionRequest))
         	$transactionRequest = new TransactionRequest();
 
@@ -71,9 +73,9 @@ class Acquirer {
         	$response->setReturnMessage($e->getMessage());
             return $response;
         }
-        
+
         $transactionResponse = TransactionResponse::mapFromJson($response);
-        
+
         return $transactionResponse;
     }
 
@@ -85,10 +87,10 @@ class Acquirer {
     function refund($tid, $refundRequest = null)
     {
         $url_path = "transactions/$tid/refunds";
-        
+
         if (is_null($refundRequest))
         	$refundRequest = new RefundRequest();
-        
+
         try {
         	$request = new Request($this->security);
         	$response = $request->post($url_path, $refundRequest->toJson());
@@ -99,7 +101,7 @@ class Acquirer {
         	$response->setReturnMessage($e->getMessage());
             return $response;
         }
-        	
+
         $refundResponse = RefundResponse::mapFromJson($response);
 
         return $refundResponse;

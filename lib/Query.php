@@ -1,5 +1,7 @@
 <?php
 
+namespace erede;
+
 use erede\common\Request;
 use erede\model\Security;
 use erede\model\QueryTransactionResponse;
@@ -22,7 +24,7 @@ class Query {
 
     /**
      * Get transaction by id
-     * 
+     *
      * @param string
      * @return QueryTransactionResponse
      */
@@ -32,7 +34,7 @@ class Query {
 
     /**
      * Get transaction by reference
-     * 
+     *
      * @param string $reference
      * @return QueryTransactionResponse
      */
@@ -42,7 +44,7 @@ class Query {
 
 	/**
      * Get transaction
-     * 
+     *
      * @param string $reference
      * @return QueryTransactionResponse
      */
@@ -73,7 +75,7 @@ class Query {
         	$response->setReturnMessage($e->getMessage());
             return $response;
         }
-        
+
         $queryTransactionResponse = QueryTransactionResponse::mapFromJson($response);
 
         return $queryTransactionResponse;
@@ -81,7 +83,7 @@ class Query {
 
     /**
      * Get a refund of a transaction by refundId
-     * 
+     *
      * @param string $tid
      * @param string $refundId
      * @return RefundResponse
@@ -100,7 +102,7 @@ class Query {
         	$response->setReturnMessage($e->getMessage());
             return $response;
         }
-        
+
         $refundResponse = RefundResponse::mapFromJson($response);
 
         return $refundResponse;
@@ -108,7 +110,7 @@ class Query {
 
     /**
      * Get the refunds of a transaction
-     * 
+     *
      * @param string $tid
      * @return RefundListResponse
      */
@@ -126,7 +128,7 @@ class Query {
         	$response->setReturnMessage($e->getMessage());
             return $response;
         }
-        
+
         $refundListResponse = RefundListResponse::mapFromJson($response);
 
         return $refundListResponse;

@@ -34,5 +34,8 @@
     "suggest": {
     },
     "autoload": {
+        "psr-4": {
+            "erede\\": "src/"
+        }
     }
 }
